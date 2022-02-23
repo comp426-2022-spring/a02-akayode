@@ -98,9 +98,9 @@ export function countFlips(array) {
 export function flipACoin(call) {
   var hidden_filp = coinFlip();
   if (call == hidden_filp) {
-    return "{call: " + call + ", flip: " + hidden_filp + ", result = win}";
+    return "{ call: " + call + ", flip: " + hidden_filp + ", result = win }";
   } else {
-    return "{call: " + call + ", flip: " + hidden_filp + ", result = lose}";
+    return "{ call: " + call + ", flip: " + hidden_filp + ", result = lose }";
   } 
 }
 
