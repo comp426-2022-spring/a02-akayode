@@ -96,15 +96,14 @@ export function countFlips(array) {
  */
 
 export function flipACoin(call) {
-  const hidden_filp = coinFlip();
+  var hidden_filp = coinFlip();
   if (call == hidden_filp) {
-    var output  = `{call: ${call}, flip: ${hidden_filp}, result: 
-    win}`;
+    return `{ call: ${call}, flip: ${hidden_filp}, result: 
+    win }`;
   } else {
-    var output  = `{call: ${call}, flip: ${hidden_filp}, result: 
-    lose}`;
+    return `{ call: ${call}, flip: ${hidden_filp}, result: 
+    lose }`;
   } 
-  return output;
 }
 
 
