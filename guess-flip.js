@@ -7,6 +7,12 @@ let argument = require('minimist')(process.argv.slice(2));
 
 let call = argument['call'];
 
-let flip = flipACoin(call);
+if (call == "heads" || call == "tails") {
+    var flip = flipACoin(call);
+    console.log(flip)
+} else {
+    console.log("Error: no input")
+    console.log("Usage: node guess-flip --call=[heads|tails]")
+}
 
-console.log(flip)
+

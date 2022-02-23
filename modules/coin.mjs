@@ -97,11 +97,6 @@ export function countFlips(array) {
 
 export function flipACoin(call) {
   const hidden_filp = coinFlip();
-  if (call != "heads"|"tails") {
-    var output  = `{call: undefined, flip: ${hidden_filp}, result: 
-    lose}`;
-    return output;
-  }
   if (call == hidden_filp) {
     var output  = `{call: ${call}, flip: ${hidden_filp}, result: 
     win}`;
