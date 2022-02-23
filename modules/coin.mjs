@@ -74,7 +74,13 @@ export function countFlips(array) {
       tails += 1;
     }
   }
-  const output = `{ heads: ${heads}, tails: ${tails} }`;
+  if (heads > 0 && tails >0) {
+    var output = `{ heads: ${heads}, tails: ${tails} }`;
+  } else if (heads > 0 && tails == 0) {
+    var output = `{ heads: ${heads} }`;
+  } else {
+    var output = `{ tails: ${tails} }`;
+  }
   return output;
 }
 
@@ -92,11 +98,11 @@ export function countFlips(array) {
 export function flipACoin(call) {
   const hidden_filp = coinFlip();
   if (call == hidden_filp) {
-    var output  = `{ call: ${call}, flip: ${hidden_filp}, result: 
-    win }`;
+    var output  = `{call: ${call}, flip: ${hidden_filp}, result: 
+    win}`;
   } else {
-    var output  = `{ call: ${call}, flip: ${hidden_filp}, result: 
-    lose }`;
+    var output  = `{call: ${call}, flip: ${hidden_filp}, result: 
+    lose}`;
   } 
   return output;
 }
