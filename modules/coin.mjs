@@ -75,11 +75,11 @@ export function countFlips(array) {
     }
   }
   if (heads > 0 && tails >0) {
-    var output = `{heads: ${heads}, tails: ${tails}}`;
+    var output = `{ heads: ${heads}, tails: ${tails} }`;
   } else if (heads > 0 && tails == 0) {
-    var output = `{heads: ${heads}}`;
+    var output = `{ heads: ${heads} }`;
   } else {
-    var output = `{tails: ${tails}}`;
+    var output = `{ tails: ${tails} }`;
   }
   return output;
 }
@@ -98,9 +98,9 @@ export function countFlips(array) {
 export function flipACoin(call) {
   var hidden_filp = coinFlip();
   if (call == hidden_filp) {
-    return "{call: " + call + ", flip: " + hidden_filp + ", result = win}";
+    return "{ call: " + call + ", flip: " + hidden_filp + ", result = win }";
   } else {
-    return "{call: " + call + ", flip: " + hidden_filp + ", result = lose}";
+    return "{ call: " + call + ", flip: " + hidden_filp + ", result = lose }";
   } 
 }
 
